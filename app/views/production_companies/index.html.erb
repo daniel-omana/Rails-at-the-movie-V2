@@ -1,2 +1,9 @@
-<h1>ProductionCompanies#index</h1>
-<p>Find me in app/views/production_companies/index.html.erb</p>
+<h2 class="title is-2">Production Companies</h2>
+
+<ol class="ml-5">
+
+  <% @production_companies.each do |company| %>
+    <li><%= link_to company.name, company %></li>
+  <% end %>
+
+</ol>
