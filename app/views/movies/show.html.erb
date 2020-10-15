@@ -1,1 +1,25 @@
 <h2 class="title is-2"><%= @movie.title %></h2>
+
+<p class="mb-5"><%= @movie.description %></p>
+
+<progress class="progress is-danger" value="<%= @movie.average_vote%>" max=10></progress>
+
+<p>
+  <strong>Rating</strong>
+  <%= @movie.average_vote %>
+</p>
+
+<p>
+  <strong>Release Year</strong>
+  <%= @movie.year  %>
+</p>
+
+<p>
+  <strong>Duration</strong>
+  <%= @movie.duration %> minutes
+</p>
+
+<p>
+  <strong>Production Company: </strong>
+  <%= link_to @movie.production_company.name, @movie.production_company %>
+</p>
