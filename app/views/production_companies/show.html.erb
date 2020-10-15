@@ -11,7 +11,9 @@
 <div class="content">
   <ul>
     <% @production_company.movies.each do |movie| %>
-      <li><%= link_to movie.title, movie%></li>
+      <li>
+      <%= link_to movie.title, movie%>
+      </li>
     <%end%>
   </ul>
 </div>
