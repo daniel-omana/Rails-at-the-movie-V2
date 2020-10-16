@@ -18,6 +18,12 @@
       <div class="container">
         <h1 class="title is-1"><%= link_to 'Top 100 Movies from IMBD', root_path %></h1>
         <%= yield %>
+
+        <% if controller_name == 'home'%>
+          <%= render partial: 'common/footer' %>
+        <% else %>
+          <p>WAT?!</p>
+        <% end %>
       </body>
       </div>
     </section>
