@@ -1,2 +1,26 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+<div class="columns">
+  <div class="column">
+    <h2 class="title is-2">Top 10 Movies</h2>
+    <ol class="ml-5">
+      <% @movies.each do |movie| %>
+        <li>
+          <%= link_to movie.title, movie %>
+          <em>(<%= movie.production_company.name %>)</em>
+        </li>
+      <%end%>
+    </ol>
+  </div>
+  <div class="column">
+    <h2 class="title is-2">Top 10 Production Companies</h2>
+    <ol class="ml-5">
+      <% @production_companies.each do |company| %>
+        <li>
+          <%= link_to company.name, company %>
+          <em>(<%= pluralize company.movie_count, " Top Movie" %>)</em>
+        </li>
+      <% end %>
+    </ol>
+
+  </div>
+</div>
